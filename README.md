@@ -13,7 +13,7 @@ In this project, an incomplete snapshot of Twitter network is given as the train
 
 represents the network illustrated in Figure 1.
 
-![]()
+![Network diagram for the adjacency list example](https://github.com/gaoxiangyu369/Link_Prediction/blob/master/Screenshot%202018-12-10%2012.19.23.png)
 
 Each relationship has a direction indicating the source node person follows the target node person. However, some relationship or edges of the network is missing, which adds in uncertainty between two unconnected nodes. The main task to predict whether two randomly chosen nodes have a connection in real life through constructing directed social network topological structure, extracting features and training current dataset.
 
