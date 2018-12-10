@@ -16,7 +16,23 @@ represents the network illustrated in Figure 1.
 <div align=center>
   
 ![Network diagram for the adjacency list example](https://github.com/gaoxiangyu369/Link_Prediction/blob/master/Screenshot%202018-12-10%2012.19.23.png)
+
 </div>
 
 Each relationship has a direction indicating the source node person follows the target node person. However, some relationship or edges of the network is missing, which adds in uncertainty between two unconnected nodes. The main task to predict whether two randomly chosen nodes have a connection in real life through constructing directed social network topological structure, extracting features and training current dataset.
 
+## Methods
+
+### Data
+The original graph contains N = 4,867,136 Twitter users joined by 23,416,061 edges. Even the training network is a subgraph of the entire network, it still cannot run on the whole training graph due to the processing limits. Besides, it is hard to decide whether two nodes can make up a true edge or not as some edges are withheld from the training graph. Considering these two constraints, it is a competition setting with limited time to implement and run the entire graph.
+
+Therefore, we adapt a more practical way to generate our dataset and treat this project as a supervised classification problem.
+For potential edges that do not appear at the graph, we label them 0 to identify their state as temporary unlinked or fake edges. These already existed edges are Label 1 to indicate true edges. The final model tuning randomly chooses 40,000 true edges and 40,000 fake edges respectively.
+
+### Algorithm
+As for our final approach, we decided to employ multi-layer perceptron as our prediction model. We think the task is a real world problem and it is feasible to adapt artificial neural network to solve the non-linear and complex relationship (link prediction) problem. 
+
+We also try to apply other methods such as support vector machine (SVM) and NodeToVec as our other approaches to the problem. However, the process time it costs is enormous even for only 10,000 samples and we think it is not feasible with our equipment for this project.
+
+### Features
+Since the tendency for nodes that share more connections in a social network, they are more likely to be connected (Coursera, 2017). The natural alternative to computing the similarity between two nodes is to process the union set and the intersection of their neighbors. More features (Zhou, Lü, & & Zhang, 2009) are extended based on this fact and shown as below:
