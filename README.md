@@ -42,3 +42,23 @@ Since the tendency for nodes that share more connections in a social network, th
 ![Description of the Features](https://github.com/gaoxiangyu369/Link_Prediction/blob/master/images/Screenshot%202018-12-10%2012.44.36.png)
 
 </div>
+
+## Evaluation metrics
+In this work, we use the area under the receiver operating characteristic curve (AUC) as our evaluation method since it is our project standards. A 0.5 AUC represents random predictions and better model has higher value.
+
+## Results and Analysis
+
+**Individual Feature Performances**
+
+AUC | CN | JC | RAI | AAI | PA | Salton
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+AUC in own test set | 0.886515 | 0.801724 | 0.888501 | 0.888378 | 0.999435 | 0.872503
+AUC in competition test set | 0.82766 | 0.79329 | 0.84973 | 0.81786 | 0.55666 | 0.84283
+
+**Feature combination performance**
+
+AUC | CN + RAI | CN + Salton | RAI + Salton | CN + RAI + Salton | CN + JC + RAI + AAI + PA + Salton
+------------ | ------------- | ------------- | ------------- | ------------- | -------------
+AUC in own test set | 0.882315 | 0.873475 | 0.889123 | 0.902315 | 0.772539
+AUC in competition test set | 0.80523 | 0.72483 | 0.84236 | 0.85894 | 0.71322
+
