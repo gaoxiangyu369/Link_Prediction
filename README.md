@@ -15,7 +15,7 @@ represents the network illustrated in Figure 1.
 
 <div align=center>
   
-![Network diagram for the adjacency list example](https://github.com/gaoxiangyu369/Link_Prediction/blob/master/Screenshot%202018-12-10%2012.19.23.png)
+![Network diagram for the adjacency list example](https://github.com/gaoxiangyu369/Link_Prediction/blob/master/images/Screenshot%202018-12-10%2012.19.23.png)
 
 </div>
 
@@ -36,3 +36,9 @@ We also try to apply other methods such as support vector machine (SVM) and Node
 
 ### Features
 Since the tendency for nodes that share more connections in a social network, they are more likely to be connected (Coursera, 2017). The natural alternative to computing the similarity between two nodes is to process the union set and the intersection of their neighbors. More features (Zhou, Lü, & & Zhang, 2009) are extended based on this fact and shown as below:
+
+<div align=center>
+  
+![Description of the Features](https://github.com/gaoxiangyu369/Link_Prediction/blob/master/images/Screenshot%202018-12-10%2012.44.36.png)
+
+</div>
